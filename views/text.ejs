@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
@@ -18,19 +17,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
         integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/"
         crossorigin="anonymous"></script>
-
 </head>
 
 <body>
-    <form action="/<%=id%>/addtext" method="post">
-        <button class="btn btn-primary">add text</button>
-    </form>
-    <form action="/addimage" method="post">
-        <button class="btn btn-primary">add image</button>
-    </form>
-    <form action="/viewpages" method="post">
-        <button class="btn btn-primary">view pages</button>
-    </form>
+    <div class="container">
+        <form method="post" action="/auth/<%=id%>/savetext ">
+            <div class="form-floating">
+                <textarea class="form-control" name ="data" placeholder="Enter Your Text Here" id="floatingTextarea2" style="height: 100px"></textarea>
+                <label for="floatingTextarea2" >Enter your text here</label>
+                <button class="btn btn-primary" >save text</button>
+              </div>
+        </form>
+    </div>
+    </script>
 </body>
 
 </html>
