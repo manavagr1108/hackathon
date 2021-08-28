@@ -23,7 +23,7 @@ app.use(express.static('public'))
 
 //login page
 router.get('/', (req, res) => {
-    res.render('base',{title :'poll-booth'})
+    res.render('base',{title :'sem-books'})
 })
 
 //dashboard page + checking of email and password
@@ -51,17 +51,40 @@ router.post('/signup', (req, res)=>{
    res.render('signup',{message:''})
 })
 
-// new poll get request
-
-router.get('/newpoll',(req, res)=>{
-   res.render('newpoll')
+router.post('/:id', (req, res)=>{
+   let sem = req.params.id;
+   if(sem==1)
+   { 
+      res.render('sem1')
+   }
+   if(sem==2)
+   { 
+      res.render('sem1')
+   }
+   if(sem==3)
+   { 
+      res.render('sem1')
+   }
+   if(sem==4)
+   { 
+      res.render('sem1')
+   }
+   if(sem==5)
+   { 
+      res.render('sem1')
+   }
+   if(sem==6)
+   { 
+      res.render('sem1')
+   }
+   if(sem==7)
+   { 
+      res.render('sem1')
+   }
+   if(sem==8)
+   { 
+      res.render('sem1')
+   }
+   console.log(sem);
 })
-
-
-router.get('/admin',(req, res)=>{
-   res.render('admin_log');
-})
-// router.get('/recent',(req, res)=>{
-//    res.render('recent');
-// })
 module.exports = router;

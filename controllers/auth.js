@@ -77,33 +77,5 @@ exports.login = (req,res) => {
         }
       })
 }
-exports.admin = (req,res) => {
-    // const {email, password} = req.body
-    var email = req.body.email;
-    var password = req.body.password;
-    if(req.body.email== 'manavagr1108@gmail.com'&& req.body.password== '123')
-    {
-        res.render('create_poll');
-    }
-    else
-            {
-                res.send('please enter crt email and password')    
-            }
-}
 
-exports.recent = (req, res)=>{
-    // res.render('recent')
-    
-       arr= db.query('select * from results',(err, rows,fields)=>{
-            if (err)
-            { 
-                console.log(err);
-            }
-            else
-            { 
-                res.render('recent',{items: rows})
-            }
-        })
-    // console.log(arr);
-    // res.render('recent');
-}
+
